@@ -1,0 +1,7 @@
+
+# Disable occlusion since it causes background videos not to be rendered when a full-screen window is on top of the browser window 
+# which is annoying cause when terminal transparency is less than 1.0 cause I wanna watch the video while using terminal
+[browser.disable_occlusion]
+opera = "Set opera://flags/#calculate-native-win-occlusion Disabled"
+chrome = "Set chrome://flags/#calculate-native-win-occlusion Disable"
+firefox = "Open about:config, search for widget.windows.window_occlusion_tracking.enabled , and set it false."
