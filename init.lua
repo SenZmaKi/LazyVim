@@ -6,13 +6,13 @@ vim.g.autoformat = false -- Disable autoformat on save, shit's annoying
 
 -- Set background color to NONE cause windows terminal doesn't add transparency
 -- if the tool explicitly sets a background color
-vim.cmd([[
-highlight Normal guibg=NONE
-highlight NonText guibg=NONE
-highlight SignColumn guibg=NONE
-highlight StatusLine guibg=NONE
-highlight NotifyBackground guibg=#000000
-]])
+-- vim.cmd([[
+-- highlight Normal guibg=NONE
+-- highlight NonText guibg=NONE
+-- highlight SignColumn guibg=NONE
+-- highlight StatusLine guibg=NONE
+-- highlight NotifyBackground guibg=#000000
+-- ]])
 
 -- Neovide configu
 if vim.g.neovide then

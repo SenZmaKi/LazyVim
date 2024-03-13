@@ -2,11 +2,6 @@ local funcutils = require("utils.functions")
 return {
 
   {
-    "andweeb/presence.nvim", -- Discord rich presence
-    event = "VeryLazy"
-
-  },
-  {
     "nvim-telescope/telescope-fzf-native.nvim",
     -- Override LazyVim\LazyVim build instructions cause make doesn't seem to work on my windows system
     build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -41,7 +36,16 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    keys = {
+      { "<leader>mpp", "<cmd>MarkdownPreview<cr>", desc = "Start Markdown Preview" },
+      { "<leader>mps", "<cmd>MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
+      { "<leader>mpt", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
+    },
     ft = { "markdown" },
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+      vim.g.mkdp_auto_close = 0 -- Disable auto closing when leaving markdown file buffer
+    end,
     build = function()
       vim.fn["mkdp#util#install"]()
     end,

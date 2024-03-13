@@ -53,14 +53,14 @@ return {
     },
     opts = {
 
-   --    Inline chat instead of completely new window
-      window = {
-        layout = "float",
-        relative = "cursor",
-        width = 1,
-        height = 0.4,
-        row = 1,
-      },
+      --  Inline chat instead of completely new window
+      -- window = {
+      --   layout = "float",
+      --   relative = "cursor",
+      --   width = 1,
+      --   height = 0.4,
+      --   row = 1,
+      -- },
     },
   },
 }
