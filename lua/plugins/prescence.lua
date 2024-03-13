@@ -18,27 +18,27 @@ return {
       file_assets = {
         py = {
           "Python",
-          "https://preview.redd.it/j4ffgnnyt59b1.jpg?auto=webp&s=74c1dc2b109899733308f1c8997c3a693b89394c", -- Tsunade
+          "https://preview.redd.it/its-happening-v0-0ubxoqc9xv5c1.jpg?width=1080&crop=smart&auto=webp&s=38266e09899f139be222cfe841f19be918c39a68", -- Gojo strong return
         },
         lua = {
           "Lua",
-          "https://preview.redd.it/oo3xoucjch891.jpg?width=1080&crop=smart&auto=webp&s=369d055b6f913d97771c970ffd5165317687fde0", -- Esdeath
+          "https://preview.redd.it/does-jogo-have-what-it-takes-v0-0wy1f4881kyb1.png?width=1080&crop=smart&auto=webp&s=44f434b5d1aa9f62d8927a7eb219e73839880357", -- Save the curse society jogoat
         },
         js = {
           "JavaScript",
-          "https://s1.zerochan.net/Vermeil.600.3928499.jpg", -- Vermeil
+          "https://preview.redd.it/the-agenda-is-back-v0-c97945bgc26c1.jpg?width=1080&crop=smart&auto=webp&s=83d58dcadd95322ed6c630bba7be3ca0c6536d50", -- Save me Gege Im a fraud
         },
         ts = {
           "Typescript",
-          "https://s1.zerochan.net/Vermeil.600.3928499.jpg", -- Vermeil
+          "https://preview.redd.it/the-agenda-is-back-v0-c97945bgc26c1.jpg?width=1080&crop=smart&auto=webp&s=83d58dcadd95322ed6c630bba7be3ca0c6536d50", -- Save me Gege Im a fraud
         },
         rs = {
           "Rust",
-          "https://preview.redd.it/36ywnpiycod61.png?auto=webp&s=fdf66930e439ea47f1fb6c2a57164407d348bdf4", -- Lady Dimitrescu
+          "https://preview.redd.it/kpvw2rekapg91.jpg?auto=webp&s=39408bca64a7eb1512e167210d0ac910e141fd54", -- Even panda cum
         },
         go = {
           "Go",
-          "https://s4.anilist.co/file/anilistcdn/character/large/b22055-gMEwJMWVZesx.png", -- Hanekawa
+          "https://preview.redd.it/does-jogo-have-what-it-takes-v0-0wy1f4881kyb1.png?width=1080&crop=smart&auto=webp&s=44f434b5d1aa9f62d8927a7eb219e73839880357", -- Save the curse society jogoat
         },
       }, -- Custom file asset definitions keyed by file names and extensions (see default config at `lua/presence/file_assets.lua` for reference)
       show_time = true, -- Show the timer
