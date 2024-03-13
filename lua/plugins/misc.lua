@@ -2,6 +2,11 @@ local funcutils = require("utils.functions")
 return {
 
   {
+    "andweeb/presence.nvim", -- Discord rich presence
+    event = "VeryLazy"
+
+  },
+  {
     "nvim-telescope/telescope-fzf-native.nvim",
     -- Override LazyVim\LazyVim build instructions cause make doesn't seem to work on my windows system
     build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
