@@ -26,3 +26,5 @@ set_keymap(
   "<cmd>lua vim.diagnostic.open_float()<CR>",
   { desc = "Show error diagnostics for the current line" }
 )
+
+set_keymap("n", "<leader>rl", "<cmd>LspRestart<CR>", { desc = "Restart LSP" })

@@ -1,6 +1,26 @@
 local funcutils = require("utils.functions")
 return {
-
+  -- https://github.com/folke/noice.nvim
+  {
+    "folke/noice.nvim",
+    opts = {
+      lsp = {
+        hover = {
+          -- Set not show a message if hover is not available
+          -- ex: shift+k on Typescript code
+          silent = true,
+        },
+      },
+    },
+  },
+  {
+    "zeioth/garbage-day.nvim",
+    dependencies = "neovim/nvim-lspconfig",
+    event = "VeryLazy",
+    opts = {
+      -- your options here
+    },
+  },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     -- Override LazyVim\LazyVim build instructions cause make doesn't seem to work on my windows system

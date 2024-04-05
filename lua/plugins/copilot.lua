@@ -1,4 +1,5 @@
 return {
+
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
@@ -9,21 +10,21 @@ return {
 
     keys = {
       {
-        "<leader>ccc",
-        ":CopilotChat: ",
+        "<leader>ccs",
+        ":SelectionChat: ",
         desc = "CopilotChat - Chat with current selection",
       },
 
       {
         "<leader>cco",
-        "<cmd>CopilotChatOpen<cr>",
-        desc = "CopilotChat - Open chat window",
+        "<cmd>CopilotChatToggle<cr>",
+        desc = "CopilotChat - Toggle chat window",
       },
 
       {
         "<leader>ccb",
         function()
-          local input = vim.fn.input("Buffer Chat: ")
+          local input = vim.fn.input("BufferChat: ")
           if input ~= "" then
             require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
           end
