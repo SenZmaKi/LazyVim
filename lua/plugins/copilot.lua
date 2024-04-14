@@ -11,12 +11,12 @@ return {
     keys = {
       {
         "<leader>ccs",
-        ":SelectionChat: ",
+        ":CopilotChat: ",
         desc = "CopilotChat - Chat with current selection",
       },
 
       {
-        "<leader>cco",
+        "<leader>cct",
         "<cmd>CopilotChatToggle<cr>",
         desc = "CopilotChat - Toggle chat window",
       },

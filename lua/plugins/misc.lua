@@ -1,6 +1,6 @@
 local funcutils = require("utils.functions")
+local tabutils = require("utils.tables")
 return {
-  -- https://github.com/folke/noice.nvim
   {
     "folke/noice.nvim",
     opts = {
@@ -13,18 +13,20 @@ return {
       },
     },
   },
-  {
-    "zeioth/garbage-day.nvim",
-    dependencies = "neovim/nvim-lspconfig",
-    event = "VeryLazy",
-    opts = {
-      -- your options here
-    },
-  },
+  -- {
+  --   "zeioth/garbage-day.nvim",
+  --   dependencies = "neovim/nvim-lspconfig",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     -- your options here
+  --   },
+  -- },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
-    -- Override LazyVim\LazyVim build instructions cause make doesn't seem to work on my windows system
-    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    -- Override build instructions cause make doesn't seem to work on windows
+    build = tabutils.os.is_windows
+        and "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+      or nil,
   },
 
   -- Install themes
@@ -57,9 +59,9 @@ return {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     keys = {
-      { "<leader>mpp", "<cmd>MarkdownPreview<cr>", desc = "Start Markdown Preview" },
-      { "<leader>mps", "<cmd>MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
-      { "<leader>mpt", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
+      { "<leader>ms", "<cmd>MarkdownPreview<cr>", desc = "Start Markdown Preview" },
+      { "<leader>mx", "<cmd>MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
+      { "<leader>mt", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
     },
     ft = { "markdown" },
     init = function()
