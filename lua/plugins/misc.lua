@@ -32,6 +32,8 @@ return {
   -- Install themes
   { "ellisonleao/gruvbox.nvim", lazy = true },
   { "akinsho/horizon.nvim", lazy = true },
+
+  -- LazyVim overrides
   {
     "LazyVim/LazyVim",
     opts = {

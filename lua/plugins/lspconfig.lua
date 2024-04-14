@@ -31,11 +31,22 @@ local rust_analyzer = {
 }
 
 local eslint = {
-  filetypes = { "balls" }, --Deactivate eslint cause it's kinda annoying and deactivating it from LazyExtras doesn't seem to work
+  filetypes = { "balls" }, -- Deactivate eslint cause it's kinda annoying and deactivating it from LazyExtras doesn't seem to work
 }
 
 return {
   "neovim/nvim-lspconfig",
+  init = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    -- Remap Run Codelens keymaps cause they conflict with my CopilotChat config
+    for _, key in ipairs(keys) do
+      if key[1] == "<leader>cc" then
+        key[1] = "<leader>cs"
+      elseif key[1] == "<leader>cC" then
+        key[1] = "<leader>cS"
+      end
+    end
+  end,
   opts = {
     setup = {
       ["*"] = function(_, _) end,
