@@ -2,6 +2,8 @@
 require("config.lazy")
 local tabutils = require("utils.tables")
 vim.g.autoformat = false -- Disable autoformat on save, it's annoying
+-- Dirty fix for hackathon
+vim.g.root_spec = { "cwd" }
 if tabutils.os.is_windows then
   -- Change the compiler for nvim-treesitter to zig cause gcc doesn't work well in in windows system
   -- Seems like gcc is back to working again maybe they fixed it but I'll leave this here just incase
