@@ -17,8 +17,8 @@ set_keymap("i", "<C-w>j", "<Esc><C-w>j", { desc = "Go to the window below" })
 set_keymap("i", "<C-w>l", "<Esc><C-w>l", { desc = "Go to the right window" })
 set_keymap("i", "<C-w>h", "<Esc><C-w>h", { desc = "Go to the left window" })
 -- floating terminal
-local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
-set_keymap("i", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
-set_keymap("i", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+-- local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
+-- set_keymap("i", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
+-- set_keymap("i", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 set_keymap("n", "<leader>rl", "<cmd>LspRestart<CR>", { desc = "Restart LSP" })
