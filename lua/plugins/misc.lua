@@ -1,5 +1,5 @@
 local funcutils = require("utils.functions")
-local tabutils = require("utils.tables")
+local globals = require("utils.globals")
 return {
   {
     "folke/noice.nvim",
@@ -24,7 +24,7 @@ return {
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     -- Override build instructions cause make doesn't seem to work on windows
-    build = tabutils.os.is_windows
+    build = globals.os.is_windows
         and "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
       or nil,
   },
@@ -32,13 +32,11 @@ return {
   -- Install themes
   { "ellisonleao/gruvbox.nvim", lazy = true },
   { "akinsho/horizon.nvim", lazy = true },
-
-  -- LazyVim overrides
   {
     "LazyVim/LazyVim",
     opts = {
       -- Pick random theme
-      colorscheme = funcutils.pickRandomValue({ "gruvbox", "horizon" }),
+      colorscheme = funcutils.pick_random_value({ "gruvbox", "horizon" }),
     },
   },
 

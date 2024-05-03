@@ -2,9 +2,9 @@ return {
   --- Picks a random value from the provided table
   --- @param table table
   --- @return any
-  pickRandomValue = function(table)
+  pick_random_value = function(table)
     math.randomseed(os.time())
-    local randomIndex = math.random(#table)
-    return table[randomIndex]
+    local random_index = math.random(#table)
+    return table[random_index]
   end,
 }
