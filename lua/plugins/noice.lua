@@ -7,6 +7,6 @@ return {
         -- for instance when using two LSPs but one LSP doesn't have hover info
         silent = true,
       },
-    },
-  },
+   },
+},
 }

@@ -11,10 +11,14 @@ set_keymap("i", "<C-j>", "<Esc>o", { desc = "Create a new line below and move in
 set_keymap("i", "<C-l>", "<Esc>la", { desc = "Move forward one character" })
 set_keymap("i", "<C-h>", "<Esc>ha", { desc = "Move back one character" })
 
+set_keymap("n", "<Leader>lx", "<CMD>LazyExtras<CR>", { desc = "Lazy extras" })
+vim.keymap.del("n", "<Leader>l")
+set_keymap("n", "<Leader>ll", "<CMD>Lazy<CR>", { desc = "Lazy" })
+set_keymap("n", "<Leader>db", "<CMD>Dashboard<CR>", { desc = "Dashboard" })
+
 -- floating terminal
 -- local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
 -- set_keymap("i", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
 -- set_keymap("i", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
-set_keymap("n", "<leader>rl", "<cmd>LspRestart<CR>", { desc = "Restart LSP" })
-
+set_keymap("n", "<Leader>rl", "<cmd>LspRestart<CR>", { desc = "Restart LSP" })
