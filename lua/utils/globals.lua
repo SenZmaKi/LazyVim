@@ -8,6 +8,6 @@ return {
     },
   },
   terminal = {
-    transparent_background = false,
+    transparent_background = true,
   },
 }

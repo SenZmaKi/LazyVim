@@ -1,5 +1,4 @@
-local globals = require("utils.globals")
-return globals.plugins.neo_tree.use_trash
+return require("utils.globals").plugins.neo_tree.use_trash
     and {
       "nvim-neo-tree/neo-tree.nvim",
       -- https://github.com/nvim-neo-tree/neo-tree.nvim/issues/202#issuecomment-1428278234
@@ -40,4 +39,4 @@ return globals.plugins.neo_tree.use_trash
         },
       },
     }
-  or nil
+  or {}

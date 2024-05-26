@@ -30,10 +30,6 @@ local rust_analyzer = {
   },
 }
 
-local eslint = {
-  filetypes = { "balls" }, -- Deactivate eslint cause it's kinda annoying and deactivating it from LazyExtras doesn't seem to work
-}
-
 return {
   "neovim/nvim-lspconfig",
   init = function()
@@ -57,7 +53,6 @@ return {
     servers = {
       pyright = pyright,
       rust_analyzer = rust_analyzer,
-      eslint = eslint,
     },
   },
 }
