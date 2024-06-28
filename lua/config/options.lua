@@ -4,6 +4,7 @@
 
 require("config.filetypes")
 
+vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.autoformat = false -- Disable autoformat on save, it's annoying
 -- vim.g.root_spec = { "cwd" }
 
