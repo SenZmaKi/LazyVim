@@ -4,6 +4,7 @@ local pyright = {
   -- requirements.txt in the project root dir (doesn't matter if it's empty so long as it's there)
   filetypes = { "python" },
   settings = {
+    pyright = { autoImportCompletion = true },
     python = {
       pythonPath = "python",
       analysis = {

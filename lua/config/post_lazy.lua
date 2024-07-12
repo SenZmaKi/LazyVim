@@ -13,6 +13,7 @@ if globals.terminal.transparent_background then
     highlight NotifyBackground guibg=#000000
     ]])
 end
+-- vim.g.root_spec = { "cwd" }
 
 -- if globals.os.is_windows then
 -- Change the compiler for nvim-treesitter to zig cause gcc doesn't work well in in windows system
@@ -20,4 +21,3 @@ end
 -- just incase I  eventually run into issue again
 -- require("nvim-treesitter.install").compilers = { "zig" }
 -- end
-
