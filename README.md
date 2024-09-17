@@ -1,4 +1,9 @@
-# 💤 LazyVim
-
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+# Installation
+- Windows (Command Prompt)
+```
+git clone https://github.com/SenZmaKi/LazyVim %LOCALAPPDATA%\nvim && nvim
+```
+- Linux/Mac
+```
+git clone https://github.com/SenZmaKi/LazyVim ~/.config/nvim && nvim
+```
