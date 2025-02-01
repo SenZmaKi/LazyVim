@@ -15,9 +15,7 @@ if globals.terminal.transparent_background then
 end
 -- vim.g.root_spec = { "cwd" }
 
--- if globals.os.is_windows then
--- Change the compiler for nvim-treesitter to zig cause gcc doesn't work well in in windows system
--- Seems like gcc is back to working again maybe they fixed it but I'll leave this here
--- just incase I  eventually run into issue again
--- require("nvim-treesitter.install").compilers = { "zig" }
--- end
+if globals.os.is_windows then
+  -- Change windows compiler to prefer clang
+  require("nvim-treesitter.install").compilers = { "clang", "zig", "gcc", "cl", "cc" }
+end
