@@ -19,3 +19,4 @@ if globals.os.is_windows then
   -- Change windows compiler to prefer clang
   require("nvim-treesitter.install").compilers = { "clang", "zig", "gcc", "cl", "cc" }
 end
+

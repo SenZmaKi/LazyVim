@@ -26,3 +26,4 @@
 ```
 git clone https://github.com/SenZmaKi/LazyVim ~/.config/nvim && nvim
 ```
+
