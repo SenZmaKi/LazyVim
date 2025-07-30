@@ -13,7 +13,7 @@ if globals.terminal.transparent_background then
     highlight NotifyBackground guibg=#000000
     ]])
 end
--- vim.g.root_spec = { "cwd" }
+vim.g.root_spec = { "cwd" }
 
 if globals.os.is_windows then
   -- Change windows compiler to prefer clang
